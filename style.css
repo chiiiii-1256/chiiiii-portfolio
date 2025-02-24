@@ -19,7 +19,7 @@ body {
     background-position: center;
 }
 #home {
-    background-image: url(https://github.com/chiiiii-1256/chiiiii-portfolio/blob/main/close-up-coffee-cup-with-tasty-cookies.jpg);
+    background-image: url(close-up-coffee-cup-with-tasty-cookies.jpg);
     background-color: rgba(255, 255, 255, 0.7);
     background-blend-mode: overlay;
     min-height: 100vh;
