@@ -1,12 +1,11 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-
 html {
     font-size: 100%;
 }
 body {
-    font-family: 'Sacramento','游ゴシック', sans-serif;
-    line-height: 1.7;
+    font-family: 'Sacramento', cursive;
+    /*line-height: 1.7;*/
     height: 100vh;
 }
 .wapper {
@@ -14,14 +13,15 @@ body {
     margin: 0 auto;
     padding: 0 4%;
 }
-/* --------------    header　  --------------  */
 .big-bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 #home {
-    background-image: url(https://pakutaso.cdn.rabify.me/shared/img/thumb/NKJ56_coffeecok.jpg.webp?d=500);
+    background-image: url(./close-up-coffee-cup-with-tasty-cookies.jpg);
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: overlay;
     min-height: 100vh;
 }
 .logo-img {
@@ -34,53 +34,139 @@ body {
 }
 a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 img {
     max-width: 100%;
 }
 .main-nav {
     display: flex;
-    font-size: 1.2rem;
-    font-weight: 700;
-    /*
-    text-transform: uppercase;
-    font-weight: bold;
-    */
+    text-transform: none;
     list-style: none;
+    font-weight: bold;
     }
 .main-nav li {
-    border-bottom: 1px solid lightseagreen;
-    margin-left: 30px;
+    margin-left: 30px;    
+}
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 35px;
+
+  width: 134px;
+  height: 54px;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
+  stroke: #12bba4;
+  stroke-width: 2;
+  stroke-dasharray: 120px, 16px;
+  stroke-dashoffset: 20px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+
+a.btn-svg span {
+  color: #000;
 }
 .page-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-/*
 .home-content {
     text-align: center;
     margin-top: 10%;
 }
-*/
 .page-title {
     font-size: 60px;
     text-transform: capitalize;
-    text-align: center;
     }
-.page-title-news {
-    font-size: 60px;
-    text-transform: capitalize;
-    text-align: center;
-    padding: 37px 0;
-    }
-/*
 .home-content p {
     font-size: 16px;
     margin: 10px 0 30px;
 }
-.cafe-menu {
+a.btn-border {
+    border-radius: 0;
+    font-family: '游ゴシック'
+  }
+  
+a.btn-border:before,
+a.btn-border:after {
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    content: '';
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  
+    background: #12bba4;
+  }
+  
+a.btn-border:before {
+    top: 0;
+    left: 0;
+  }
+  
+a.btn-border:after {
+    right: 0;
+    bottom: 0;
+  }
+  
+a.btn-border:hover:before,
+a.btn-border:hover:after {
+    width: 0;
+  }
+p {
+    font-weight: 900;
+    font-family: '游ゴシック'
+}
+/*.cafe-menu {
     background-color: teal;
     padding: 18px 30px;
     border-radius: 5px;
@@ -88,88 +174,6 @@ img {
 .cafe-menu:hover {
     opacity: 0.8;
 }
-*/
-#news {
-    background-image: url(./cut-delicious-cheesecake-slice-tea-cup-white-table-near-open-door.jpg);
-    width: 100%;
-    height: 270px;
-    /*background-position: 0 -625px;*/
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: overlay;
-    margin-bottom: 40px;
-}
-/* --------------    news contents　  --------------  */
-.news-contents {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-/* --------------    main　  --------------  */
-article {
-    width: 74%;
-}
-.post-info {
-    position: relative;
-    /*padding-top: 4px;*/
-    margin-bottom: 40px;
-}
-.post-title, .post-cat {
-    margin-left: 115px;
-}
-.post-date {
-    position: absolute;
-    top: 0;
-    color: white;
-    background-color: lightseagreen;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    font-size: 1.625rem;
-    padding-top: 11px;
-}
-span {
-    display: block;
-    font-size: 1rem;
-    border-top: 1px rgba(255,255,255,.5) solid;
-    width: 60%;
-    margin: 0 auto;
-    }
-article img {
-    margin-bottom: 20px;
-    width: 98%;
-}
-.article-img {
-    text-align: center;
-}
-article p {
-    margin-bottom: 10px;
-}
-/* --------------    aside　  --------------  */
-aside {
-    width: 22%;
-}
-.sub-title {
-    border-bottom: 3px solid lightseagreen;
-    font-weight: normal;
-    padding: 0 8px 8px;
-}
-.sub-menu {
-    list-style: none;
-    margin-bottom: 40px;
-    padding: 10px;
-}
-.sub-menu li {
-    border-bottom: 1px solid lightseagreen;
-    padding: 10px 0;
-}
-.sub-menu a {
-    display: block;
-}
-.sub-title-p {
-    padding: 12px 10px;
-}
-/* --------------    レスポンシブ　メディアクエリー　  --------------  */
 /* レスポンシブ　メディアクエリ　*/
 @media (max-width: 600px) {
     .page-title {
@@ -191,30 +195,4 @@ aside {
     .home-content * {
         margin: 5% 0;
     }
-    /* main */
-    .page-title-news {
-        padding: 0;
-        line-height: 60px;
-    }
-    .news-contents {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    article {
-        width: 100%;
-    }
-    aside {
-        width: 100%;
-    }
 }
-/* --------------    footer　  --------------  */
-footer {
-    background-color: lightseagreen;
-    color: mistyrose;
-    text-align: center;
-    padding: 26px;
-}
-/* .post-title {
-    color: red;
-} */
