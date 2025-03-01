@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Sacramento','游ゴシック', sans-serif;
+    line-height: 1.7;
+    height: 100vh;
+}
+.wapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* --------------    header　  --------------  */
+.big-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#home {
+    background-image: url(https://pakutaso.cdn.rabify.me/shared/img/thumb/NKJ56_coffeecok.jpg.webp?d=500);
+    min-height: 100vh;
+}
+.logo-img {
+    font-size: 0;
+    display: block;
+    mix-blend-mode: multiply;
+    width: 80px;
+    height: 80px;
+    margin-top: 14px;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+img {
+    max-width: 100%;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    /*
+    text-transform: uppercase;
+    font-weight: bold;
+    */
+    list-style: none;
+    }
+.main-nav li {
+    border-bottom: 1px solid lightseagreen;
+    margin-left: 30px;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+/*
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}
+*/
+.page-title {
+    font-size: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    }
+.page-title-news {
+    font-size: 60px;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 37px 0;
+    }
+/*
+.home-content p {
+    font-size: 16px;
+    margin: 10px 0 30px;
+}
+.cafe-menu {
+    background-color: teal;
+    padding: 18px 30px;
+    border-radius: 5px;
+    }
+.cafe-menu:hover {
+    opacity: 0.8;
+}
+*/
+#news {
+    background-image: url(./cut-delicious-cheesecake-slice-tea-cup-white-table-near-open-door.jpg);
+    width: 100%;
+    height: 270px;
+    /*background-position: 0 -625px;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    margin-bottom: 40px;
+}
+/* --------------    news contents　  --------------  */
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+/* --------------    main　  --------------  */
+article {
+    width: 74%;
+}
+.post-info {
+    position: relative;
+    /*padding-top: 4px;*/
+    margin-bottom: 40px;
+}
+.post-title, .post-cat {
+    margin-left: 115px;
+}
+.post-date {
+    position: absolute;
+    top: 0;
+    color: white;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 1.625rem;
+    padding-top: 11px;
+}
+span {
+    display: block;
+    font-size: 1rem;
+    border-top: 1px rgba(255,255,255,.5) solid;
+    width: 60%;
+    margin: 0 auto;
+    }
+article img {
+    margin-bottom: 20px;
+    width: 98%;
+}
+.article-img {
+    text-align: center;
+}
+article p {
+    margin-bottom: 10px;
+}
+/* --------------    aside　  --------------  */
+aside {
+    width: 22%;
+}
+.sub-title {
+    border-bottom: 3px solid lightseagreen;
+    font-weight: normal;
+    padding: 0 8px 8px;
+}
+.sub-menu {
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+.sub-menu li {
+    border-bottom: 1px solid lightseagreen;
+    padding: 10px 0;
+}
+.sub-menu a {
+    display: block;
+}
+.sub-title-p {
+    padding: 12px 10px;
+}
+/* --------------    レスポンシブ　メディアクエリー　  --------------  */
+/* レスポンシブ　メディアクエリ　*/
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    /* header */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 10% 20px 7%;
+    }
+    .page-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-content * {
+        margin: 5% 0;
+    }
+    /* main */
+    .page-title-news {
+        padding: 0;
+        line-height: 60px;
+    }
+    .news-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    article {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+/* --------------    footer　  --------------  */
+footer {
+    background-color: lightseagreen;
+    color: mistyrose;
+    text-align: center;
+    padding: 26px;
+}
+/* .post-title {
+    color: red;
+} */
