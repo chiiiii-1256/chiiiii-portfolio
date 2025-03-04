@@ -43,10 +43,6 @@ img {
     display: flex;
     font-size: 1.2rem;
     font-weight: 700;
-    /*
-    text-transform: uppercase;
-    font-weight: bold;
-    */
     list-style: none;
     }
 .main-nav li {
@@ -58,116 +54,51 @@ img {
     justify-content: space-between;
     align-items: flex-end;
 }
-/*
-.home-content {
-    text-align: center;
-    margin-top: 10%;
-}
-*/
 .page-title {
     font-size: 60px;
     text-transform: capitalize;
     text-align: center;
     }
-.page-title-news {
+.page-title-menu {
     font-size: 60px;
     text-transform: capitalize;
     text-align: center;
     padding: 37px 0;
     }
-/*
-.home-content p {
-    font-size: 16px;
-    margin: 10px 0 30px;
-}
-.cafe-menu {
-    background-color: teal;
-    padding: 18px 30px;
-    border-radius: 5px;
-    }
-.cafe-menu:hover {
-    opacity: 0.8;
-}
-*/
-#news {
+#menu {
     background-image: url(./cut-delicious-cheesecake-slice-tea-cup-white-table-near-open-door.jpg);
     width: 100%;
     height: 270px;
-    /*background-position: 0 -625px;*/
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: overlay;
     margin-bottom: 40px;
 }
-/* --------------    news contents　  --------------  */
-.news-contents {
-    display: flex;
-    justify-content: space-between;
+/* --------------    menu　  --------------  */
+.grid {
+    display: grid; 
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
     margin-bottom: 50px;
+    padding: 0 4%;
 }
-/* --------------    main　  --------------  */
-article {
-    width: 74%;
+.big-box1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    object-fit: cover;
 }
-.post-info {
-    position: relative;
-    /*padding-top: 4px;*/
-    margin-bottom: 40px;
+.big-box1 img {
+    height: 94%;
+    width: 100%;
 }
-.post-title, .post-cat {
-    margin-left: 115px;
+.big-box2 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+    object-fit: cover;
 }
-.post-date {
-    position: absolute;
-    top: 0;
-    color: white;
-    background-color: lightseagreen;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    font-size: 1.625rem;
-    padding-top: 11px;
-}
-span {
-    display: block;
-    font-size: 1rem;
-    border-top: 1px rgba(255,255,255,.5) solid;
-    width: 60%;
-    margin: 0 auto;
-    }
-article img {
-    margin-bottom: 20px;
-    width: 98%;
-}
-.article-img {
-    text-align: center;
-}
-article p {
-    margin-bottom: 10px;
-}
-/* --------------    aside　  --------------  */
-aside {
-    width: 22%;
-}
-.sub-title {
-    border-bottom: 3px solid lightseagreen;
-    font-weight: normal;
-    padding: 0 8px 8px;
-}
-.sub-menu {
-    list-style: none;
-    margin-bottom: 40px;
-    padding: 10px;
-}
-.sub-menu li {
-    border-bottom: 1px solid lightseagreen;
-    padding: 10px 0;
-}
-.sub-menu a {
-    display: block;
-}
-.sub-title-p {
-    padding: 12px 10px;
+.big-box2 img {
+    height: 94%;
+    width: 100%;
 }
 /* --------------    レスポンシブ　メディアクエリー　  --------------  */
 /* レスポンシブ　メディアクエリ　*/
@@ -176,6 +107,9 @@ aside {
         font-size: 2.5rem;
     }
     /* header */
+    .page-title-menu {
+        padding-top: 0;
+    }
     .main-nav {
         font-size: 1rem;
         margin-top: 10px;
@@ -192,20 +126,12 @@ aside {
         margin: 5% 0;
     }
     /* main */
-    .page-title-news {
-        padding: 0;
-        line-height: 60px;
+    .big-box1, .big-box2 {
+        grid-column: auto;
+        grid-row: auto;
     }
-    .news-contents {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    article {
-        width: 100%;
-    }
-    aside {
-        width: 100%;
+    .big-box1, .big-box2 img {
+        height: 100%;
     }
 }
 /* --------------    footer　  --------------  */
@@ -215,6 +141,3 @@ footer {
     text-align: center;
     padding: 26px;
 }
-/* .post-title {
-    color: red;
-} */
