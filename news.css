@@ -115,6 +115,7 @@ article {
 }
 .post-title, .post-cat {
     margin-left: 115px;
+    margin-top: 20px;
 }
 .post-date {
     position: absolute;
